@@ -33,13 +33,16 @@
             <div class="marquee-content-2 transition-opacity faded-out" id="marqueeContent2"></div>
         </div>
 
-        <form class="search" id="searchForm">
-            <input type="text" id="searchInput" placeholder="Search for a city..."
-                class="search-input text-xs font-nunito transition-border" />
-            <button id="searchButton" type="submit">
-                <div class="text-xs font-nunito font-bold">Search</div>
-            </button>
-        </form>
+        <div class="search-container">
+            <form class="search" id="searchForm">
+                <input class="search-input transition-border font-nunito text-xs" type="text" id="searchInput"
+                    placeholder="Search for a city..." />
+                <button id="searchButton" type="submit">
+                    <div class="text-xs font-nunito font-bold">Search</div>
+                </button>
+            </form>
+            <div id="errorContainer" class="error-container"></div>
+        </div>
 
         <div class="weather-result">
             <div class="weather-result-inner transition-opacity faded-out" id="weatherResult">

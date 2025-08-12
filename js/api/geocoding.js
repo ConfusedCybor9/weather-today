@@ -9,6 +9,11 @@ export async function getCityCoordinates(city) {
 		}
 
 		const data = await resp.json();
+
+		if (!data || data.length === 0) {
+			throw new Error("City not found");
+		}
+
 		const coordinates = {
 			city: data[0].name,
 			lat: data[0].lat,
@@ -17,7 +22,7 @@ export async function getCityCoordinates(city) {
 
 		return coordinates;
 	} catch (error) {
-		alert("Error fetching coordinates");
-		console.error("Error fetching coordinates:", error);
+		console.error("Error fetching coordinates data:", error);
+		throw new Error("Could not find this city");
 	}
 }
