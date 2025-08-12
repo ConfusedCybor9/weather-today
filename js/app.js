@@ -1,5 +1,5 @@
-import { createMarquee } from "./components/marquee.js";
 import { getWeatherInfo } from "./api/weather.js";
+import { createMarquee } from "./components/marquee.js";
 import { updateWeatherResult } from "./components/updateWeatherResult.js";
 
 async function init() {
