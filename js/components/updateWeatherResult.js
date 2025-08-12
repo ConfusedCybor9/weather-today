@@ -1,7 +1,9 @@
+import { animationDuration, wait } from "../helpers/animationHelper.js";
 import { toTitleCase } from "../helpers/stringHelpers.js";
-import { getTempIconURL } from "../helpers/weatherIconHelper.js";
-import { getWeatherIconURL } from "../helpers/weatherIconHelper.js";
-import { wait, animationDuration } from "../helpers/animationHelper.js";
+import {
+	getTempIconURL,
+	getWeatherIconURL,
+} from "../helpers/weatherIconHelper.js";
 
 export async function updateWeatherResult(weatherData) {
 	const resultContainer = document.getElementById("weatherResult");

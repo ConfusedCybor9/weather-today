@@ -1,5 +1,5 @@
+import { animationDuration, wait } from "./animationHelper.js";
 import { normalizeQuery } from "./stringHelpers.js";
-import { wait, animationDuration } from "./animationHelper.js";
 
 function validateCityName(query) {
 	const normalizedQuery = normalizeQuery(query);

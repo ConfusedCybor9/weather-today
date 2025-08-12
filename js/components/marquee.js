@@ -1,6 +1,6 @@
 import { getWeatherInfo } from "../api/weather.js";
+import { animationDuration, wait } from "../helpers/animationHelper.js";
 import { getWeatherIconURL } from "../helpers/weatherIconHelper.js";
-import { wait, animationDuration } from "../helpers/animationHelper.js";
 
 export async function createMarquee(cities) {
 	const marqueeContent = document.getElementById("marqueeContent");
