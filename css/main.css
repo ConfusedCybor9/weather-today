@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+
+:root {
+	--font-xs: 16px;
+	--font-sm: 18px;
+	--font-md: 28px;
+	--font-lg: 48px;
+	--font-xl: 64px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family:
+		"Inter", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.font-nunito {
+	font-family: "Nunito", "Segoe UI", sans-serif;
+}
+
+.font-quicksand {
+	font-family: "Quicksand", "Segoe UI", sans-serif;
+}
+
+.text-xs {
+	font-size: var(--font-xs);
+}
+
+.text-sm {
+	font-size: var(--font-sm);
+}
+
+.text-md {
+	font-size: var(--font-md);
+}
+
+.text-lg {
+	font-size: var(--font-lg);
+}
+
+.text-xl {
+	font-size: var(--font-xl);
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.icon {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.icon-sm {
+	width: 32px;
+	height: 32px;
+}
+
+.icon-md {
+	width: 64px;
+	height: 64px;
+}
+
+.icon-lg {
+	width: 128px;
+	height: 128px;
+}
+
+.transition-border {
+	transition: border-color 0.2s ease-in-out;
+}
+
+.transition-opacity {
+	transition: opacity 0.5s ease-in-out;
+}
+
+.faded-out {
+	opacity: 0;
+}
+
+.content {
+	max-width: 1200px;
+	margin-inline: auto;
+	margin-block: 40px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	display: flex;
+	gap: 20px;
+
+	align-items: center;
+}
+
+.marquee {
+	display: flex;
+	align-items: center;
+
+	overflow: hidden;
+	position: relative;
+
+	width: 600px;
+	height: 150px;
+}
+
+.marquee-content,
+.marquee-content-2 {
+	position: absolute;
+	display: flex;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes marquee2 {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.marquee-content {
+	animation: marquee 15s linear infinite;
+}
+
+.marquee-content-2 {
+	animation: marquee2 15s linear infinite;
+}
+
+.marquee-card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	align-items: center;
+	justify-content: space-between;
+
+	min-width: 120px;
+	padding: 16px;
+	margin-right: 20px;
+
+	border: 1px solid #c9d5f285;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.marquee-card:hover {
+	border: 1px solid #99acd985;
+}
+
+.search {
+	display: flex;
+	gap: 10px;
+
+	width: 400px;
+}
+
+.search input {
+	flex: 1;
+	padding: 10px;
+
+	border: 1px solid #c9d5f285;
+	border-radius: 10px;
+
+	outline: none;
+}
+
+.search input:hover,
+.search input:focus {
+	border: 1px solid #99acd985;
+}
+
+.search button {
+	background-color: #4e8cff;
+	color: white;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.weather-result {
+	min-width: 400px;
+	padding-inline: 40px;
+	padding-block: 20px;
+
+	border: 1px solid #c9d5f285;
+	border-radius: 12px;
+}
+
+.weather-result-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.weather-result-temperature {
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+}
