@@ -12,3 +12,7 @@ A **simple and elegant** weather application that lets you check the current wea
 
 - Vanilla HTML, CSS and JS
 - OpenWeatherMap API for real-time weather data
+
+## 🎬 Demo
+
+- https://weather-today.wasmer.app/
