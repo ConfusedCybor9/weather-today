@@ -1,6 +1,8 @@
 import { toTitleCase } from "../helpers/stringHelpers.js";
-import { getTempIconURL } from "../helpers/weatherIconHelper.js";
-import { getWeatherIconURL } from "../helpers/weatherIconHelper.js";
+import {
+	getTempIconURL,
+	getWeatherIconURL,
+} from "../helpers/weatherIconHelper.js";
 
 export async function updateWeatherResult(weatherData) {
 	const resultContainer = document.getElementById("weatherResult");
