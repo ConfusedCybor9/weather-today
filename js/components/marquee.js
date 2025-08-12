@@ -1,5 +1,6 @@
 import { getWeatherInfo } from "../api/weather.js";
 import { getWeatherIconURL } from "../helpers/weatherIconHelper.js";
+import { wait, animationDuration } from "../helpers/animationHelper.js";
 
 export async function createMarquee(cities) {
 	const marqueeContent = document.getElementById("marqueeContent");
@@ -23,7 +24,7 @@ export async function createMarquee(cities) {
 
 	marqueeContent2.innerHTML = marqueeContent.innerHTML;
 
-	await new Promise((resolve) => setTimeout(resolve, 500));
+	await wait(animationDuration.fade);
 	marqueeContent.classList.remove("faded-out");
 	marqueeContent2.classList.remove("faded-out");
 }
