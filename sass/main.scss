@@ -1,0 +1,16 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+@use 'base/layout';
+
+@use 'components/header';
+@use 'components/marquee';
+@use 'components/search';
+@use 'components/weather-result';
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");

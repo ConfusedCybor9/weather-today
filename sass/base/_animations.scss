@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+.transition {
+  &-border {
+    @include transition(border-color, map.get($transition-duration, 'fast'));
+  }
+
+  &-opacity {
+    @include transition(opacity, map.get($transition-duration, 'normal'));
+  }
+}
+
+.faded-out {
+  opacity: 0;
+}

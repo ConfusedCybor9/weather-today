@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+.weather-result {
+  min-width: $search-width;
+  padding: 20px;
+  border: 1px solid rgba($color-border, 0.52);
+  border-radius: 12px;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &-temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-details {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    border-top: 1px solid rgba($color-border, 0.52);
+  }
+}
