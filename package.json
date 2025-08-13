@@ -1,6 +1,13 @@
 {
+	"scripts": {
+		"clean": "rm -rf css/ && bun biome-check",
+		"biome-check": "bunx @biomejs/biome check --write",
+		"build-styles": "sass sass/main.scss css/main.css --style compressed --no-source-map",
+		"dev": "sass sass/main.scss css/main.css --watch --source-map"
+	},
 	"dependencies": {},
 	"devDependencies": {
-		"@biomejs/biome": "2.1.4"
+		"@biomejs/biome": "2.1.4",
+		"sass": "^1.90.0"
 	}
 }

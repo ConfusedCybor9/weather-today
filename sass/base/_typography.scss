@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.font {
+  &-nunito {
+    font-family: $font-family-nunito;
+  }
+
+  &-quicksand {
+    font-family: $font-family-quicksand;
+  }
+
+  &-semibold {
+    font-weight: 600;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+}
+
+.text {
+  @each $size, $value in $font-size {
+    &-#{$size} {
+      font-size: $value;
+    }
+  }
+}
+
+.icon {
+  @each $size, $value in $icon-size {
+    &-#{$size} {
+      @include icon($size);
+    }
+  }
+}

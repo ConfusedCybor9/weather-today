@@ -1,0 +1,40 @@
+// Typography
+$font-family-primary: "Inter", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-family-nunito: "Nunito", "Segoe UI", sans-serif;
+$font-family-quicksand: "Quicksand", "Segoe UI", sans-serif;
+
+// Font sizes
+$font-size: (
+  'xs': 16px,
+  'sm': 18px,
+  'md': 28px,
+  'lg': 48px,
+  'xl': 64px
+);
+
+// Colors
+$color-background: #ffffff;
+$color-border: #c9d5f2;
+$color-border-hover: #99acd9;
+$color-background-error: #fad9d9;
+$color-error: #ff4e4e;
+$color-primary: #4e8cff;
+
+// Icon sizes
+$icon-size: (
+  'sm': 32px,
+  'md': 64px,
+  'lg': 128px
+);
+
+// Animations
+$transition-duration: (
+  'fast': 0.2s,
+  'normal': 0.5s
+);
+
+// Layout
+$container-max-width: 1200px;
+$marquee-width: 600px;
+$marquee-height: 150px;
+$search-width: 400px;
