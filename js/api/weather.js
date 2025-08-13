@@ -19,6 +19,8 @@ export async function getWeatherInfo(city) {
 			weatherId: data.weather[0].id,
 			temperature: Math.round(data.main.temp),
 			feelsLike: Math.round(data.main.feels_like),
+			humidity: data.main.humidity,
+			windSpeed: data.wind?.speed != null ? Math.round(data.wind.speed) : 0,
 		};
 		return relevantData;
 	} catch (error) {
