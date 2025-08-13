@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Today</title>
-    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/app.js" type="module"></script>
+    <script src="./src/app.js" type="module"></script>
 </head>
 
 <body>
     <div class="content">
         <div class="header">
-            <div class="icon icon-md" style="background-image: url('./assets/weather-icons/cloudy.png');">
+            <div class="icon icon-md" style="background-image: url('/weather-icons/cloudy.png');">
             </div>
             <div class="font-quicksand text-xl font-semibold">Weather
                 Today</div>
@@ -26,7 +26,7 @@
             <div class="marquee-content transition-opacity faded-out" id="marqueeContent">
                 <div class="marquee-card transition-border">
                     <div class="text-sm font-nunito font-bold">Paris</div>
-                    <div class="icon icon-sm" style="background-image: url('./assets/weather-icons/cloudy.png');"></div>
+                    <div class="icon icon-sm" style="background-image: url('/weather-icons/cloudy.png');"></div>
                     <div class="text-xs font-nunito font-semibold">25°C</div>
                 </div>
             </div>
@@ -47,8 +47,8 @@
         <div class="weather-result">
             <div class="weather-result-inner transition-opacity faded-out" id="weatherResult">
                 <div class="text-lg font-quicksand font-semibold" id="cityName">Bishkek</div>
-                <div class="icon icon-lg" style="background-image: url('./assets/weather-icons/cloudy.png');"
-                    id="weatherIcon"></div>
+                <div class="icon icon-lg" style="background-image: url('/weather-icons/cloudy.png');" id="weatherIcon">
+                </div>
                 <div class="text-md font-quicksand font-semibold" id="weatherDescription">Clear Sky</div>
                 <div class="weather-result-temperature text-xl font-nunito font-bold" id="temperature">30°C<div
                         class="icon icon-md" id="temperatureIcon"
