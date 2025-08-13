@@ -1,13 +1,13 @@
-import atmosphere from "../../assets/weather-icons/conditions/atmosphere.png";
-import clearSky from "../../assets/weather-icons/conditions/clear-sky.png";
-import clouds from "../../assets/weather-icons/conditions/clouds.png";
-import drizzle from "../../assets/weather-icons/conditions/drizzle.png";
-import rain from "../../assets/weather-icons/conditions/rain.png";
-import snow from "../../assets/weather-icons/conditions/snow.png";
-import thunderstorm from "../../assets/weather-icons/conditions/thunderstorm.png";
-import cold from "../../assets/weather-icons/temperature/cold.png";
-import hot from "../../assets/weather-icons/temperature/hot.png";
-import moderate from "../../assets/weather-icons/temperature/moderate.png";
+import atmosphere from "../../assets/img/weather-icons/conditions/atmosphere.png";
+import clearSky from "../../assets/img/weather-icons/conditions/clear-sky.png";
+import clouds from "../../assets/img/weather-icons/conditions/clouds.png";
+import drizzle from "../../assets/img/weather-icons/conditions/drizzle.png";
+import rain from "../../assets/img/weather-icons/conditions/rain.png";
+import snow from "../../assets/img/weather-icons/conditions/snow.png";
+import thunderstorm from "../../assets/img/weather-icons/conditions/thunderstorm.png";
+import cold from "../../assets/img/weather-icons/temperature/cold.png";
+import hot from "../../assets/img/weather-icons/temperature/hot.png";
+import moderate from "../../assets/img/weather-icons/temperature/moderate.png";
 
 export function getTempIconURL(temp) {
 	if (temp) {
