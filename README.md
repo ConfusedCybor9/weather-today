@@ -10,7 +10,7 @@ A **simple and elegant** weather application that lets you check the current wea
 
 ## 🛠️ Technologies Used
 
-- Vanilla HTML, CSS and JS
+- Vite, HTML, JS, SASS
 - OpenWeatherMap API for real-time weather data
 
 ## 🎬 Demo

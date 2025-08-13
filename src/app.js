@@ -1,10 +1,11 @@
-import { getWeatherInfo } from "./api/weather.js";
-import { createMarquee } from "./components/marquee.js";
-import { updateWeatherResult } from "./components/updateWeatherResult.js";
+import { getWeatherInfo } from "./js/api/weather.js";
+import { createMarquee } from "./js/components/marquee.js";
+import { updateWeatherResult } from "./js/components/updateWeatherResult.js";
 import {
 	showInputError,
 	validateCityName,
-} from "./helpers/validationHelper.js";
+} from "./js/helpers/validationHelper.js";
+import "../src/sass/main.scss";
 
 async function init() {
 	const marqueeCities = ["Paris", "London", "Tokyo", "Moscow"];
