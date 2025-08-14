@@ -24,6 +24,10 @@
   &-translate {
     @include transition(transform, map.get($transition-duration, 'fast'));
   }
+
+  &-bg {
+    @include transition(background-color, map.get($transition-duration, 'fast'));
+  }
 }
 
 .faded-out {
