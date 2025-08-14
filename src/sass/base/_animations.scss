@@ -20,6 +20,10 @@
   &-opacity {
     @include transition(opacity, map.get($transition-duration, 'normal'));
   }
+
+  &-translate {
+    @include transition(transform, map.get($transition-duration, 'fast'));
+  }
 }
 
 .faded-out {
