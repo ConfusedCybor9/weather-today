@@ -15,23 +15,23 @@
   &-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid rgba($color-border, 0.52);
+    border: 1px solid rgba($border, 0.5);
     border-radius: 10px;
     outline: none;
     font-family: $font-family-nunito;
 
     &:hover,
     &:focus {
-      border-color: rgba($color-border-hover, 0.52);
+      border-color: rgba($border-hover, 0.5);
     }
 
     &.input-error {
-      border-color: rgba($color-error, 0.52);
+      border-color: rgba($error, 0.5);
     }
   }
 
   button {
-    background-color: $color-primary;
+    background-color: $primary;
     color: white;
     border: none;
     padding: 10px 16px;
@@ -51,9 +51,9 @@
   }
 
   &-message {
-    color: $color-error;
-    background-color: $color-background-error;
-    border: 1px solid rgba($color-error, 0.21);
+    color: $error;
+    background-color: $background-error;
+    border: 1px solid rgba($error, 0.2);
     border-radius: 8px;
     padding: 8px 16px;
     margin-top: 10px;

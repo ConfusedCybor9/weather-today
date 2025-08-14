@@ -32,12 +32,12 @@
     min-width: 120px;
     padding: 16px;
     margin-right: 20px;
-    border: 1px solid rgba($color-border, 0.52);
+    border: 1px solid rgba($border, 0.5);
     border-radius: 8px;
     cursor: pointer;
 
     &:hover {
-      border-color: rgba($color-border-hover, 0.52);
+      border-color: rgba($border-hover, 0.5);
       transform: translateY(-2px);
     }
 

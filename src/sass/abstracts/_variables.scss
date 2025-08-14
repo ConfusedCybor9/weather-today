@@ -13,13 +13,18 @@ $font-size: (
 );
 
 // Colors
-$gray: #333333;
-$color-background: #ffffff;
-$color-border: #c9d5f2;
-$color-border-hover: #99acd9;
-$color-background-error: #fad9d9;
-$color-error: #ff4e4e;
-$color-primary: #4e8cff;
+$text-dark: #000000;
+$text-light: #efefef;
+$text-gray: #333333;
+
+$background-light: #ffffff;
+$background-error: #fad9d9;
+
+$border: #c9d5f2;
+$border-hover: #99acd9;
+
+$error: #ff4e4e;
+$primary: #4e8cff;
 
 // Icon sizes
 $icon-size: (
