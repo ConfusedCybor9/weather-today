@@ -12,24 +12,6 @@
   100% { transform: translateX(0%); }
 }
 
-.transition {
-  &-border {
-    @include transition(border-color, map.get($transition-duration, 'fast'));
-  }
-
-  &-opacity {
-    @include transition(opacity, map.get($transition-duration, 'normal'));
-  }
-
-  &-translate {
-    @include transition(transform, map.get($transition-duration, 'fast'));
-  }
-
-  &-bg {
-    @include transition(background-color, map.get($transition-duration, 'fast'));
-  }
-}
-
 .faded-out {
   opacity: 0;
 }

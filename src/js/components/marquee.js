@@ -4,6 +4,7 @@ import { getWeatherIconURL } from "../helpers/weatherIconHelper.js";
 import { updateWeatherResult } from "./updateWeatherResult.js";
 
 export async function createMarquee(cities) {
+	const marquee = document.getElementById("marquee");
 	const marqueeContent = document.getElementById("marqueeContent");
 	const marqueeContent2 = document.getElementById("marqueeContent2");
 
@@ -12,7 +13,7 @@ export async function createMarquee(cities) {
 		const icon = getWeatherIconURL(weatherData.weatherId);
 
 		return `
-      <div class="marquee-card transition-border transition-translate" data-city="${city}">
+      <div class="marquee-card" data-city="${city}">
         <div class="text-sm font-nunito font-bold">${weatherData.city}</div>
         <div class="icon icon-sm" style="background-image: url('${icon}');"></div>
         <div class="text-xs font-nunito font-semibold">${weatherData.temperature}°C</div>
@@ -38,6 +39,5 @@ export async function createMarquee(cities) {
 	addMarqueeClickHandlers(marqueeContent2);
 
 	await wait(animationDuration.fade);
-	marqueeContent.classList.remove("faded-out");
-	marqueeContent2.classList.remove("faded-out");
+	marquee.classList.remove("faded-out");
 }

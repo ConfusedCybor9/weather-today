@@ -29,15 +29,14 @@ function validateCityName(query) {
 	return normalizedQuery;
 }
 
-function showInputError(message, searchInput, errorContainer) {
+async function showInputError(message, searchInput, errorContainer) {
 	searchInput.classList.add("input-error");
 	const existingError = errorContainer.querySelector(".error-message");
 	if (existingError) {
 		existingError.remove();
 	}
 	const errorDiv = document.createElement("div");
-	errorDiv.className =
-		"error-message text-xs font-nunito transition-opacity faded-out";
+	errorDiv.className = "error-message text-xs font-nunito faded-out";
 	errorDiv.textContent = message;
 	errorContainer.appendChild(errorDiv);
 

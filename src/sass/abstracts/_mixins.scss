@@ -1,10 +1,6 @@
 @use 'sass:map';
 @use 'variables' as *;
 
-@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
-  transition: $property $duration $timing;
-}
-
 @mixin icon($size) {
   width: map.get($icon-size, $size);
   height: map.get($icon-size, $size);

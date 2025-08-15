@@ -1,5 +1,6 @@
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
+@use 'abstracts/themes';
 
 @use 'base/reset';
 @use 'base/typography';
@@ -11,7 +12,15 @@
 @use 'components/marquee';
 @use 'components/search';
 @use 'components/weather-result';
+@use 'components/theme-toggle';
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+
+body {
+  @include themes.initThemeVariables();
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
