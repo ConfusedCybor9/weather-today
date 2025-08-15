@@ -1,6 +1,7 @@
 import { getWeatherInfo } from "./js/api/weather.js";
 import { createMarquee } from "./js/components/marquee.js";
 import { updateWeatherResult } from "./js/components/updateWeatherResult.js";
+import { initTheme, toggleTheme } from "./js/helpers/themeHelper.js";
 import {
 	showInputError,
 	validateCityName,
@@ -8,6 +9,8 @@ import {
 import "../src/sass/main.scss";
 
 async function init() {
+	initTheme();
+
 	const marqueeCities = ["Paris", "London", "Tokyo", "Moscow"];
 	createMarquee(marqueeCities);
 
@@ -34,12 +37,14 @@ async function init() {
 			showInputError(error.message, searchInput, errorContainer);
 		}
 	});
+
+	const themeToggle = document.getElementById("themeToggle");
+	themeToggle.addEventListener("click", toggleTheme);
 }
 
 init();
 
 // TODO: hide API key API key: e967d8d356aa5220e28bc7e8ba35f936
-// TODO: add dark mode
 // TODO: add bgs
 // TODO: add lang change
 // TODO: add search suggests (maybe with https://nominatim.org/release-docs/latest/api/Search/)

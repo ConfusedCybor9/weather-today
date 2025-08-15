@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+@mixin initThemeVariables() {
+  // Light theme (default)
+  @each $key, $value in $light-theme {
+    --#{$key}: #{$value};
+  }
+
+  // Dark theme
+  &[data-theme="dark"] {
+    @each $key, $value in $dark-theme {
+      --#{$key}: #{$value};
+    }
+  }
+}

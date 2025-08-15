@@ -1,4 +1,6 @@
+@use 'sass:map';
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .search {
   display: flex;
@@ -14,32 +16,20 @@
 
   &-input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid rgba($border, 0.5);
-    border-radius: 10px;
-    outline: none;
-    font-family: $font-family-nunito;
-
-    &:hover,
-    &:focus {
-      border-color: rgba($border-hover, 0.5);
-    }
-
-    &.input-error {
-      border-color: rgba($error, 0.5);
-    }
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
 
   button {
-    background-color: $primary;
-    color: $text-light;
+    color: var(--text-button);
+    background-color: var(--background-button);
     border: none;
     padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: $primary-hover;
+      background-color: var(--background-button-hover);
     }
   }
 }
@@ -55,12 +45,14 @@
   }
 
   &-message {
-    color: $error;
-    background-color: $background-error;
-    border: 1px solid rgba($error, 0.2);
+    color: var(--text-error);
+    background-color: var(--background-error);
+    border: 1px solid color-mix(in srgb, var(--border-error), transparent 80%);
     border-radius: 8px;
     padding: 8px 16px;
     margin-top: 10px;
     pointer-events: none;
+    
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   }
 }

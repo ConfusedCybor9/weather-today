@@ -18,21 +18,20 @@
         <div class="header">
             <div class="icon icon-md" style="background-image: url('/icon/cloudy.png');">
             </div>
-            <div class="font-quicksand text-xl font-semibold">Weather
-                Today</div>
+            <div class="font-quicksand text-xl font-semibold">Weather Today</div>
+            <button id="themeToggle" class="theme-toggle text-md">🌙</button>
         </div>
-        <div class="marquee" id="marquee">
-            <div class="marquee-content transition-opacity faded-out" id="marqueeContent">
-
+        <div class="marquee faded-out" id="marquee">
+            <div class="marquee-content" id="marqueeContent">
             </div>
-            <div class="marquee-content-2 transition-opacity faded-out" id="marqueeContent2"></div>
+            <div class="marquee-content-2" id="marqueeContent2"></div>
         </div>
 
         <div class="search-container">
             <form class="search" id="searchForm">
-                <input class="search-input transition-border font-nunito text-xs" type="text" id="searchInput"
+                <input autocomplete="off" class="search-input font-nunito text-xs" type="text" id="searchInput"
                     placeholder="Search for a city..." />
-                <button id="searchButton" type="submit" class="transition-bg">
+                <button id="searchButton" type="submit">
                     <div class="text-xs font-nunito font-bold">Search</div>
                 </button>
             </form>
@@ -40,7 +39,7 @@
         </div>
 
         <div class="weather-result">
-            <div class="weather-result-inner transition-opacity faded-out" id="weatherResult">
+            <div class="weather-result-inner faded-out" id="weatherResult">
                 <div class="text-lg font-quicksand font-semibold" id="cityName">Bishkek</div>
                 <div class="icon icon-lg" style="background-image: url('/weather-icons/cloudy.png');" id="weatherIcon">
                 </div>

@@ -13,31 +13,47 @@ $font-size: (
 );
 
 // Colors
-$text-dark: #000000;
-$text-light: #f6f6ff;
-$text-gray: #333333;
+// Light theme
+$light-theme: (
+  'text-primary': #081421,
+  'text-secondary': #6f879d,
+  'text-button': #ffffff,
+  'text-error': #ff4e4e,
 
-$background-light: #ffffff;
-$background-error: #fad9d9;
+  'background-primary': #ffffff,
+  'background-secondary': #ffffff,
+  'background-button': #4e8cff,
+  'background-button-hover': #477ada,
+  'background-error': #fad9d9,
 
-$border: #c9d5f2;
-$border-hover: #99acd9;
+  'border': #c9d5f2b5,
+  'border-hover': #c9d5f2,
+  'border-error': #ff4e4e
+);
 
-$error: #ff4e4e;
-$primary: #4e8cff;
-$primary-hover: #4e86ee;
+// Dark theme
+$dark-theme: (
+  'text-primary': #dbe3f1,
+  'text-secondary': #bbc2cf,
+  'text-button': #ffffff,
+  'text-error': #f78a8a,
+
+  'background-primary': #1a1a1a,
+  'background-secondary': #1f1f1f,
+  'background-button': #3A3644,
+  'background-button-hover': #67597A,
+  'background-error': #171717,
+
+  'border': #404040,
+  'border-hover': #6b6b6b,
+  'border-error': #f78a8a
+);
 
 // Icon sizes
 $icon-size: (
   'sm': 32px,
   'md': 64px,
   'lg': 128px
-);
-
-// Animations
-$transition-duration: (
-  'fast': 0.2s,
-  'normal': 0.5s
 );
 
 // Layout
