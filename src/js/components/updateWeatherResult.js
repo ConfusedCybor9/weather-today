@@ -17,14 +17,20 @@ export async function updateWeatherResult(weatherData) {
 	const weatherIcon = getWeatherIconURL(weatherData.weatherId);
 
 	resultContainer.innerHTML = `
-            <div class="text-lg font-quicksand font-semibold" id="cityName">${weatherData.city}</div>
+            <div class="text-lg font-quicksand font-semibold" id="cityName">${
+							weatherData.city
+						}</div>
             <div class="icon icon-lg" style="background-image: url('${weatherIcon}');"></div>
-            <div class="text-md font-quicksand font-semibold" id="weatherDescription">${toTitleCase(weatherData.weatherDescription)}</div>
+            <div class="text-md font-quicksand font-semibold" id="weatherDescription">${toTitleCase(
+							weatherData.weatherDescription,
+						)}</div>
             <div class="weather-result-temperature text-xl font-nunito font-bold" id="temperature">
                 ${weatherData.temperature}°C
                 <div class="icon icon-md" style="background-image: url('${tempIcon}');"></div>
             </div>
-            <div class="text-sm font-nunito" id="feelsLike">Feels like ${weatherData.feelsLike}°C</div>
+            <div class="text-sm font-nunito" id="feelsLike">Feels like ${
+							weatherData.feelsLike
+						}°C</div>
             <div class="weather-result-details text-sm font-nunito">
                 <div class="weather-result-detail">
                     Humidity: ${weatherData.humidity}%
