@@ -22,7 +22,7 @@ export async function getWeatherInfo(city) {
 			temperature: Math.round(data.main.temp),
 			feelsLike: Math.round(data.main.feels_like),
 			humidity: data.main.humidity,
-			windSpeed: data.wind?.speed != null ? Math.round(data.wind.speed) : 0,
+			windSpeed: Math.round(data.wind?.speed || 0),
 		};
 		return relevantData;
 	} catch (error) {

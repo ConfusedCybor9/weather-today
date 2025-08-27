@@ -1,5 +1,8 @@
 import { animationDuration, wait } from "../helpers/animationHelper.js";
-import { getTranslation } from "../helpers/languageHelper.js";
+import {
+	getTranslation,
+	translateCityName,
+} from "../helpers/languageHelper.js";
 import { toTitleCase } from "../helpers/stringHelpers.js";
 import {
 	getTempIconURL,
@@ -16,11 +19,10 @@ export async function updateWeatherResult(weatherData) {
 
 	const tempIcon = getTempIconURL(weatherData.temperature);
 	const weatherIcon = getWeatherIconURL(weatherData.weatherId);
+	const translatedCityName = translateCityName(weatherData.city);
 
 	resultContainer.innerHTML = `
-            <div class="text-lg font-quicksand font-semibold" id="cityName">${
-							weatherData.city
-						}</div>
+            <div class="text-lg font-quicksand font-semibold" id="cityName">${translatedCityName}</div>
             <div class="icon icon-lg" style="background-image: url('${weatherIcon}');"></div>
             <div class="text-md font-quicksand font-semibold" id="weatherDescription">${toTitleCase(
 							weatherData.weatherDescription,

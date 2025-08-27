@@ -1,7 +1,9 @@
 export async function getCityCoordinates(city) {
 	try {
+		const encodedCity = encodeURIComponent(city.trim());
+
 		const resp = await fetch(
-			`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e967d8d356aa5220e28bc7e8ba35f936`,
+			`https://api.openweathermap.org/geo/1.0/direct?q=${encodedCity}&limit=1&appid=e967d8d356aa5220e28bc7e8ba35f936`,
 		);
 
 		if (!resp.ok) {
