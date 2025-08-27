@@ -1,4 +1,5 @@
 import { animationDuration, wait } from "../helpers/animationHelper.js";
+import { getTranslation } from "../helpers/languageHelper.js";
 import { toTitleCase } from "../helpers/stringHelpers.js";
 import {
 	getTempIconURL,
@@ -28,15 +29,15 @@ export async function updateWeatherResult(weatherData) {
                 ${weatherData.temperature}°C
                 <div class="icon icon-md" style="background-image: url('${tempIcon}');"></div>
             </div>
-            <div class="text-sm font-nunito" id="feelsLike">Feels like ${
-							weatherData.feelsLike
-						}°C</div>
+            <div class="text-sm font-nunito" id="feelsLike">${getTranslation(
+							"feelsLike",
+						)} ${weatherData.feelsLike}°C</div>
             <div class="weather-result-details text-sm font-nunito">
                 <div class="weather-result-detail">
-                    Humidity: ${weatherData.humidity}%
+                    ${getTranslation("humidity")}: ${weatherData.humidity}%
                 </div>
                 <div class="weather-result-detail">
-                    Wind: ${weatherData.windSpeed} m/s
+                    ${getTranslation("wind")}: ${weatherData.windSpeed} m/s
                 </div>
             </div>`;
 

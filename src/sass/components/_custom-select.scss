@@ -1,0 +1,100 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+:root {
+  --custom-select-arrow-light: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M4.427 6.427L8 10l3.573-3.573L10.573 5.427 8 8 5.427 5.427z'/%3E%3C/svg%3E");
+  --custom-select-arrow-dark: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23ccc' d='M4.427 6.427L8 10l3.573-3.573L10.573 5.427 8 8 5.427 5.427z'/%3E%3C/svg%3E");
+}
+
+body[data-theme="dark"] {
+  --custom-select-arrow: var(--custom-select-arrow-dark);
+}
+
+body:not([data-theme="dark"]) {
+  --custom-select-arrow: var(--custom-select-arrow-light);
+}
+
+.custom-select {
+  position: relative;
+  width: 120px;
+
+  &-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      border-color: var(--border-hover);
+    }
+
+    &.active {
+      border-color: var(--border-hover);
+    }
+  }
+
+  &-arrow {
+    width: 16px;
+    height: 16px;
+    background-image: var(--custom-select-arrow, var(--custom-select-arrow-light));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    transition: transform 0.3s ease-in-out;
+
+    .custom-select-trigger.active & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+    z-index: 1000;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &-option {
+    padding: 10px 12px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--background-button);
+      color: var(--text-button);
+    }
+
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+
+    &.selected {
+      background-color: var(--background-button-hover);
+      color: var(--text-button);
+    }
+  }
+}

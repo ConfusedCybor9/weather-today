@@ -1,18 +1,18 @@
-@use 'abstracts/variables' as *;
-@use 'abstracts/mixins' as *;
-@use 'abstracts/themes';
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/themes";
 
-@use 'base/reset';
-@use 'base/typography';
-@use 'base/animations';
-@use 'base/layout';
+@use "base/reset";
+@use "base/typography";
+@use "base/animations";
+@use "base/layout";
 
-@use 'components/header';
-@use 'components/icon-attribution';
-@use 'components/marquee';
-@use 'components/search';
-@use 'components/weather-result';
-@use 'components/theme-toggle';
+@use "components/header";
+@use "components/icon-attribution";
+@use "components/marquee";
+@use "components/search";
+@use "components/weather-result";
+@use "components/custom-select";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");

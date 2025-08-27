@@ -1,6 +1,41 @@
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .header {
   display: flex;
   align-items: center;
   gap: 20px;
   padding-top: 20px;
+
+  &-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.language-select {
+  width: 120px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-hover);
+  }
 }

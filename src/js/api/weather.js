@@ -1,11 +1,13 @@
+import { getCurrentLanguage } from "../helpers/languageHelper.js";
 import { getCityCoordinates } from "./geocoding.js";
 
 export async function getWeatherInfo(city) {
 	try {
 		const coordinates = await getCityCoordinates(city);
+		const language = getCurrentLanguage();
 
 		const resp = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=e967d8d356aa5220e28bc7e8ba35f936`,
+			`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&lang=${language}&appid=e967d8d356aa5220e28bc7e8ba35f936`,
 		);
 
 		if (!resp.ok) {

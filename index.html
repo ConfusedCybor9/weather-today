@@ -19,7 +19,19 @@
             <div class="icon icon-md" style="background-image: url('/icon/cloudy.png');">
             </div>
             <div class="font-quicksand text-xl font-semibold">Weather Today</div>
-            <button id="themeToggle" class="theme-toggle text-md">🌙</button>
+            <div class="header-controls">
+                <div class="custom-select language-select font-nunito text-xs" id="languageDropdown">
+                    <div class="custom-select-trigger" id="languageSelect">
+                        <span id="selectedLanguage">English</span>
+                        <div class="custom-select-arrow"></div>
+                    </div>
+                    <div class="custom-select-options font-nunito text-xs" id="languageOptions" style="display: none;">
+                        <div class="custom-select-option" data-value="en">English</div>
+                        <div class="custom-select-option" data-value="ru">Русский</div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle text-md">🌙</button>
+            </div>
         </div>
         <div class="marquee faded-out" id="marquee">
             <div class="marquee-content" id="marqueeContent">
