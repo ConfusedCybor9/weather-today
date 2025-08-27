@@ -1,5 +1,5 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .font {
   &-nunito {
@@ -8,6 +8,7 @@
 
   &-quicksand {
     font-family: $font-family-quicksand;
+    line-height: 1.1;
   }
 
   &-semibold {
