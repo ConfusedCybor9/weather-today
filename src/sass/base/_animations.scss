@@ -1,17 +1,32 @@
-@use 'sass:map';
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use "sass:map";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee2 {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(0%); }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .faded-out {
   opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.header .font-quicksand,
+.marquee,
+.weather-result-inner {
+  transition: opacity 0.5s ease-in-out;
 }

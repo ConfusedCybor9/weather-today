@@ -160,12 +160,15 @@ export function getCurrentLanguage() {
 	return localStorage.getItem(languageKey) || defaultLanguage;
 }
 
+function getTranslations(languageCode) {
+	return translations[languageCode] || translations[defaultLanguage];
+}
+
 export function setLanguage(languageCode) {
 	localStorage.setItem(languageKey, languageCode);
 
-	const t = translations[languageCode] || translations[defaultLanguage];
+	const t = getTranslations(languageCode);
 
-	// Update UI elements
 	const titleElement = document.querySelector(".header .font-quicksand");
 	if (titleElement) titleElement.textContent = t.title;
 
@@ -193,6 +196,8 @@ export function setLanguage(languageCode) {
 			option.classList.add("selected");
 		}
 	});
+
+	updateMarqueeContent();
 }
 
 export function initLanguage() {
@@ -201,13 +206,49 @@ export function initLanguage() {
 }
 
 export function getTranslation(key) {
-	const currentLang = getCurrentLanguage();
-	const t = translations[currentLang] || translations[defaultLanguage];
+	const t = getTranslations(getCurrentLanguage());
 	return t[key] || key;
 }
 
 export function translateCityName(cityName) {
-	const currentLang = getCurrentLanguage();
-	const t = translations[currentLang] || translations[defaultLanguage];
+	const t = getTranslations(getCurrentLanguage());
 	return t.cities?.[cityName.toLowerCase()] || cityName;
+}
+
+function updateMarqueeContent() {
+	const marqueeContent = document.getElementById("marqueeContent");
+	const marqueeContent2 = document.getElementById("marqueeContent2");
+
+	if (!marqueeContent || !marqueeContent2) return;
+
+	// Update city names in existing cards
+	marqueeContent.querySelectorAll(".marquee-card").forEach((card) => {
+		const cityElement = card.querySelector(".text-sm.font-nunito.font-bold");
+		const cityName = card.dataset.city;
+		if (cityElement && cityName) {
+			cityElement.textContent = translateCityName(cityName);
+		}
+	});
+
+	marqueeContent2.innerHTML = marqueeContent.innerHTML;
+
+	[marqueeContent, marqueeContent2].forEach((container) => {
+		// Remove old listeners by cloning
+		const newContainer = container.cloneNode(true);
+		container.parentNode.replaceChild(newContainer, container);
+
+		// Add click handler to new container
+		newContainer.addEventListener("click", async (event) => {
+			const card = event.target.closest(".marquee-card");
+			if (card) {
+				const city = card.dataset.city;
+				const { getWeatherInfo } = await import("../api/weather.js");
+				const { updateWeatherResult } = await import(
+					"../components/updateWeatherResult.js"
+				);
+				const weatherData = await getWeatherInfo(city);
+				updateWeatherResult(weatherData);
+			}
+		});
+	});
 }

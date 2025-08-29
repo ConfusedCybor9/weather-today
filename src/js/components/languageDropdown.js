@@ -1,7 +1,9 @@
 import { getWeatherInfo } from "../api/weather.js";
+import {
+	activateFadeInAnimation,
+	activateFadeOutAnimation,
+} from "../helpers/animationHelper.js";
 import { setLanguage } from "../helpers/languageHelper.js";
-import { createMarquee } from "./marquee.js";
-import { updateWeatherResult } from "./updateWeatherResult.js";
 
 export function initLanguageDropdown() {
 	const languageTrigger = document.getElementById("languageSelect");
@@ -27,25 +29,44 @@ export function initLanguageDropdown() {
 			languageTrigger.classList.remove("active");
 			languageOptions.classList.remove("active");
 
+			const elements = [
+				document.querySelector(".header .font-quicksand"),
+				document.getElementById("marquee"),
+				document.getElementById("weatherResult"),
+			].filter(Boolean);
+
+			await Promise.all(
+				elements.map((element) => activateFadeOutAnimation(element)),
+			);
+
 			setLanguage(selectedValue);
 
-			const currentCity =
-				document.getElementById("cityName")?.textContent || "bishkek";
-			const marqueeCities = ["Paris", "London", "Tokyo", "Moscow"];
-
-			try {
-				const data = await getWeatherInfo(currentCity.toLowerCase());
-				updateWeatherResult(data);
-				createMarquee(marqueeCities);
-			} catch (error) {
-				console.error("Error refreshing weather data:", error);
+			const weatherResult = document.getElementById("weatherResult");
+			if (weatherResult) {
+				const currentCity =
+					document.getElementById("cityName")?.textContent || "bishkek";
+				try {
+					const data = await getWeatherInfo(currentCity.toLowerCase());
+					await updateWeatherResultContent(weatherResult, data);
+				} catch (error) {
+					console.error("Error refreshing weather data:", error);
+				}
 			}
+
+			await Promise.all(
+				elements.map((element) => activateFadeInAnimation(element)),
+			);
 		}
 	});
 
-	// Close dropdown when clicking outside
 	document.addEventListener("click", () => {
 		languageTrigger.classList.remove("active");
 		languageOptions.classList.remove("active");
 	});
+}
+
+import { generateWeatherResultHTML } from "./updateWeatherResult.js";
+
+async function updateWeatherResultContent(container, data) {
+	container.innerHTML = generateWeatherResultHTML(data);
 }

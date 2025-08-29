@@ -10,7 +10,6 @@
   position: relative;
   width: $marquee-width;
   height: $marquee-height;
-  transition: opacity 0.5s ease-in-out;
 
   &-content,
   &-content-2 {
