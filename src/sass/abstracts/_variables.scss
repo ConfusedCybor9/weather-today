@@ -1,59 +1,60 @@
 // Typography
-$font-family-primary: "Inter", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-family-primary: "Inter", "Segoe UI", "Helvetica Neue", "Helvetica",
+  "Arial", sans-serif;
 $font-family-nunito: "Nunito", "Segoe UI", sans-serif;
-$font-family-quicksand: "Quicksand", "Segoe UI", sans-serif;
+$font-family-quicksand: "Quicksand", "Nunito", "Segoe UI", sans-serif;
 
 // Font sizes
 $font-size: (
-  'xs': 16px,
-  'sm': 18px,
-  'md': 28px,
-  'lg': 48px,
-  'xl': 64px
+  "xs": 16px,
+  "sm": 18px,
+  "md": 28px,
+  "lg": 48px,
+  "xl": 64px,
 );
 
 // Colors
 // Light theme
 $light-theme: (
-  'text-primary': #081421,
-  'text-secondary': #6f879d,
-  'text-button': #ffffff,
-  'text-error': #ff4e4e,
+  "text-primary": #081421,
+  "text-secondary": #6f879d,
+  "text-button": #ffffff,
+  "text-error": #ff4e4e,
 
-  'background-primary': #ffffff,
-  'background-secondary': #ffffff,
-  'background-button': #4e8cff,
-  'background-button-hover': #477ada,
-  'background-error': #fad9d9,
+  "background-primary": #ffffff,
+  "background-secondary": #ffffff,
+  "background-button": #74869d,
+  "background-button-hover": #4b6789,
+  "background-error": #fad9d9,
 
-  'border': #c9d5f2b5,
-  'border-hover': #c9d5f2,
-  'border-error': #ff4e4e
+  "border": #c9d5f2b5,
+  "border-hover": #c9d5f2,
+  "border-error": #ff4e4e,
 );
 
 // Dark theme
 $dark-theme: (
-  'text-primary': #dbe3f1,
-  'text-secondary': #bbc2cf,
-  'text-button': #ffffff,
-  'text-error': #f78a8a,
+  "text-primary": #dbe3f1,
+  "text-secondary": #bbc2cf,
+  "text-button": #ffffff,
+  "text-error": #f78a8a,
 
-  'background-primary': #1a1a1a,
-  'background-secondary': #1f1f1f,
-  'background-button': #3A3644,
-  'background-button-hover': #67597A,
-  'background-error': #171717,
+  "background-primary": #1a1a1a,
+  "background-secondary": #1f1f1f,
+  "background-button": #3a3644,
+  "background-button-hover": #67597a,
+  "background-error": #171717,
 
-  'border': #404040,
-  'border-hover': #6b6b6b,
-  'border-error': #f78a8a
+  "border": #404040,
+  "border-hover": #6b6b6b,
+  "border-error": #f78a8a,
 );
 
 // Icon sizes
 $icon-size: (
-  'sm': 32px,
-  'md': 64px,
-  'lg': 128px
+  "sm": 32px,
+  "md": 64px,
+  "lg": 128px,
 );
 
 // Layout

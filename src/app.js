@@ -1,6 +1,8 @@
 import { getWeatherInfo } from "./js/api/weather.js";
+import { initLanguageDropdown } from "./js/components/languageDropdown.js";
 import { createMarquee } from "./js/components/marquee.js";
 import { updateWeatherResult } from "./js/components/updateWeatherResult.js";
+import { initLanguage } from "./js/helpers/languageHelper.js";
 import { initTheme, toggleTheme } from "./js/helpers/themeHelper.js";
 import {
 	showInputError,
@@ -10,6 +12,8 @@ import "../src/sass/main.scss";
 
 async function init() {
 	initTheme();
+	initLanguage();
+	initLanguageDropdown();
 
 	const marqueeCities = ["Paris", "London", "Tokyo", "Moscow"];
 	createMarquee(marqueeCities);
@@ -43,7 +47,3 @@ async function init() {
 }
 
 init();
-
-// TODO: hide API key API key: e967d8d356aa5220e28bc7e8ba35f936
-// TODO: add lang change
-// TODO: add search suggests (maybe with https://nominatim.org/release-docs/latest/api/Search/)

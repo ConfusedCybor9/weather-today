@@ -19,11 +19,8 @@ function validateCityName(query) {
 		);
 	}
 
-	// Check for valid characters and format
-	if (!/^[a-zA-Z]+(?:[a-zA-Z\s]|-[a-zA-Z]+)*[a-zA-Z]+$/.test(normalizedQuery)) {
-		throw new Error(
-			"City name can only contain letters, single hyphens between words, and spaces",
-		);
+	if (!/^[\p{L}][\p{L}\s-]*[\p{L}]$/u.test(normalizedQuery)) {
+		throw new Error("City name can only contain letters, spaces, and hyphens");
 	}
 
 	return normalizedQuery;
