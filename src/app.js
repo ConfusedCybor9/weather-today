@@ -47,6 +47,3 @@ async function init() {
 }
 
 init();
-
-// TODO: hide API key API key: e967d8d356aa5220e28bc7e8ba35f936
-// TODO: add search suggests (maybe with https://nominatim.org/release-docs/latest/api/Search/)
