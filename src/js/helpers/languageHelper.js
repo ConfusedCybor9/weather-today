@@ -14,6 +14,7 @@ const translations = {
 		feelsLike: "Feels like",
 		humidity: "Humidity",
 		wind: "Wind",
+		windSpeedUnit: "m/s",
 		iconsAttribution: "Icons created by iconixar - Flaticon",
 		cities: {
 			paris: "Paris",
@@ -88,6 +89,7 @@ const translations = {
 		feelsLike: "Ощущается как",
 		humidity: "Влажность",
 		wind: "Ветер",
+		windSpeedUnit: "м/с",
 		iconsAttribution: "Иконки созданы iconixar - Flaticon",
 		cities: {
 			paris: "Париж",

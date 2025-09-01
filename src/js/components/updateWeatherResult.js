@@ -35,7 +35,9 @@ function generateWeatherResultHTML(weatherData) {
 				${getTranslation("humidity")}: ${weatherData.humidity}%
 			</div>
 			<div class="weather-result-detail">
-				${getTranslation("wind")}: ${weatherData.windSpeed} m/s
+				${getTranslation("wind")}: ${weatherData.windSpeed} ${getTranslation(
+					"windSpeedUnit",
+				)}
 			</div>
 		</div>`;
 }
