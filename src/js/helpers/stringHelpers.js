@@ -5,8 +5,11 @@ export function toTitleCase(str) {
 		.join(" ");
 }
 
+export function capitalizeFirst(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export function normalizeQuery(query) {
 	if (!query) return "";
-	// Trim whitespace, convert to lowercase, and normalize multiple spaces to single spaces
 	return query.trim().toLowerCase().replace(/\s+/g, " ");
 }

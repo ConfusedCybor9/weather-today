@@ -3,10 +3,11 @@ import {
 	activateFadeOutAnimation,
 } from "../helpers/animationHelper.js";
 import {
+	getCurrentLanguage,
 	getTranslation,
 	translateCityName,
 } from "../helpers/languageHelper.js";
-import { toTitleCase } from "../helpers/stringHelpers.js";
+import { capitalizeFirst, toTitleCase } from "../helpers/stringHelpers.js";
 import {
 	getTempIconURL,
 	getWeatherIconURL,
@@ -17,12 +18,16 @@ function generateWeatherResultHTML(weatherData) {
 	const weatherIcon = getWeatherIconURL(weatherData.weatherId);
 	const translatedCityName = translateCityName(weatherData.city);
 
+	// Apply title case only for English, use original description for other languages
+	const weatherDescription =
+		getCurrentLanguage() === "en"
+			? toTitleCase(weatherData.weatherDescription)
+			: capitalizeFirst(weatherData.weatherDescription);
+
 	return `
 		<div class="text-lg font-quicksand font-semibold" id="cityName">${translatedCityName}</div>
 		<div class="icon icon-lg" style="background-image: url('${weatherIcon}');"></div>
-		<div class="text-md font-quicksand font-semibold" id="weatherDescription">${toTitleCase(
-			weatherData.weatherDescription,
-		)}</div>
+		<div class="text-md font-quicksand font-semibold" id="weatherDescription">${weatherDescription}</div>
 		<div class="weather-result-temperature text-xl font-nunito font-bold" id="temperature">
 			${weatherData.temperature}°C
 			<div class="icon icon-md" style="background-image: url('${tempIcon}');"></div>
