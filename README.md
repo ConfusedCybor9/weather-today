@@ -5,13 +5,16 @@ A **simple and elegant** weather application that lets you check the current wea
 ## 🚀 Features
 
 - 🔍 Search weather by city name  
-- 🌡️ Shows current temperature & conditions  
+- 🌡️ Real-time temperature, weather conditions, and details
 - 🎨 Clean, minimalistic interface
+- 🌍 Support for Russian and English language
+- 🎭 Light and dark mode with smooth transitions
 
 ## 🛠️ Technologies Used
 
 - Vite, HTML, JS, SASS
 - OpenWeatherMap API for real-time weather data
+- OpenWeatherMap Geocoding API for city coordinates
 
 ## 🎬 Demo
 
@@ -46,22 +49,4 @@ bun run dev
 
 ```
 
-Starts Vite’s dev server — open the URL shown in the terminal.
-
-4️⃣ Build for production
-
-```bash
-
-bun run build
-
-```
-
-5️⃣ Preview the production build
-
-```bash
-
-bun run preview
-
-```
-
-</details>
+4️⃣ Open the URL shown in the terminal
