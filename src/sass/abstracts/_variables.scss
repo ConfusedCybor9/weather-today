@@ -13,6 +13,13 @@ $font-size: (
   "xl": 4rem,
 );
 
+// Breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+);
+
 // Colors
 // Light theme
 $light-theme: (
@@ -56,9 +63,3 @@ $icon-size: (
   "md": 64px,
   "lg": 128px,
 );
-
-// Layout
-$container-max-width: 1200px;
-$marquee-width: 600px;
-$marquee-height: 150px;
-$search-width: 400px;
