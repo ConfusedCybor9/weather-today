@@ -3,7 +3,7 @@
 @use "../abstracts/mixins" as *;
 
 .weather-result {
-  min-width: $search-width;
+  width: 400px;
   padding: 20px;
   border: 1px solid var(--border);
   background-color: var(--background-secondary);
