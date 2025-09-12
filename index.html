@@ -9,19 +9,17 @@
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="./css/main.css">
     <script src="./src/app.js" type="module"></script>
 </head>
 
 <body>
     <div class="content">
-        <div class="header">
+        <header class="header">
             <div class="header-title">
                 <div class="header-title-icon icon icon-md" style="background-image: url('/icon/cloudy.png');">
                 </div>
                 <div class="header-title-text font-quicksand font-semibold">Weather Today</div>
             </div>
-
             <div class="header-controls">
                 <div class="custom-select language-select font-nunito text-xs" id="languageDropdown">
                     <div class="custom-select-trigger" id="languageSelect">
@@ -35,48 +33,33 @@
                 </div>
                 <button id="themeToggle" class="theme-toggle text-md">🌙</button>
             </div>
-        </div>
-        <div class="marquee faded-out" id="marquee">
-            <div class="marquee-content" id="marqueeContent">
+        </header>
+        <main>
+            <div class="marquee faded-out" id="marquee">
+                <div class="marquee-content" id="marqueeContent">
+                </div>
+                <div class="marquee-content-2" id="marqueeContent2"></div>
             </div>
-            <div class="marquee-content-2" id="marqueeContent2"></div>
-        </div>
-
-        <div class="search-container">
-            <form class="search" id="searchForm">
-                <input autocomplete="off" class="search-input font-nunito text-xs" type="text" id="searchInput"
-                    placeholder="Search for a city..." />
-                <button id="searchButton" type="submit">
-                    <div class="text-xs font-nunito font-bold">Search</div>
-                </button>
-            </form>
-            <div id="errorContainer" class="error-container"></div>
-        </div>
-
-        <div class="weather-result">
-            <div class="weather-result-inner faded-out" id="weatherResult">
-                <div class="text-lg font-quicksand font-semibold" id="cityName">Bishkek</div>
-                <div class="icon icon-lg" style="background-image: url('/weather-icons/cloudy.png');" id="weatherIcon">
-                </div>
-                <div class="text-md font-quicksand font-semibold" id="weatherDescription">Clear Sky</div>
-                <div class="weather-result-temperature text-xl font-nunito font-bold" id="temperature">30°C<div
-                        class="icon icon-md" id="temperatureIcon"
-                        style="background-image: url('./assets/weather-icons/temp/hot.png');"></div>
-                </div>
-                <div class="text-sm font-nunito" id="feelsLike">Feels like 50°C</div>
-                <div class="weather-result-details text-sm font-nunito">
-                    <div class="weather-result-detail">
-                        Humidity: 30%
-                    </div>
-                    <div class="weather-result-detail">
-                        Wind: 4 m/s
-                    </div>
+            <div class="search-container">
+                <form class="search" id="searchForm">
+                    <input autocomplete="off" class="search-input font-nunito text-xs" type="text" id="searchInput"
+                        placeholder="Search for a city..." />
+                    <button id="searchButton" type="submit">
+                        <div class="text-xs font-nunito font-bold">Search</div>
+                    </button>
+                </form>
+                <div id="errorContainer" class="error-container"></div>
+            </div>
+            <div class="weather-result">
+                <div class="weather-result-inner faded-out" id="weatherResult">
                 </div>
             </div>
-        </div>
-        <a class="icons-attribution font-nunito text-xs" href="https://www.flaticon.com/packs/weather-162" title="icons"
-            target="_blank">Icons
-            created by iconixar - Flaticon</a>
+        </main>
+        <footer>
+            <a class="icons-attribution font-nunito text-xs" href="https://www.flaticon.com/packs/weather-162"
+                title="icons" target="_blank">Icons
+                created by iconixar - Flaticon</a>
+        </footer>
 </body>
 
 </html>

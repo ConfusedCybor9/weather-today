@@ -10,7 +10,7 @@
 }
 
 @mixin respond($size) {
-  $value: map-get($breakpoints, $size);
+  $value: map.get($breakpoints, $size);
 
   @if $value {
     @media (min-width: $value) {

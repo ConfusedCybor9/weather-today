@@ -1,6 +1,9 @@
 const languageKey = "weatherToday.language";
 const defaultLanguage = "en";
 
+import { getWeatherInfo } from "../api/weather.js";
+import { updateWeatherResult } from "../components/updateWeatherResult.js";
+
 const languages = {
 	en: "English",
 	ru: "Русский",
@@ -244,10 +247,6 @@ function updateMarqueeContent() {
 			const card = event.target.closest(".marquee-card");
 			if (card) {
 				const city = card.dataset.city;
-				const { getWeatherInfo } = await import("../api/weather.js");
-				const { updateWeatherResult } = await import(
-					"../components/updateWeatherResult.js"
-				);
 				const weatherData = await getWeatherInfo(city);
 				updateWeatherResult(weatherData);
 			}

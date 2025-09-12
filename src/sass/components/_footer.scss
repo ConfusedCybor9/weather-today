@@ -1,11 +1,13 @@
 @use "../abstracts/variables" as *;
-@use "sass:map";
 @use "../abstracts/mixins" as *;
 
-.icons-attribution {
-  color: color-mix(in srgb, var(--text-secondary), transparent 50%);
+footer {
   padding: 5px;
   display: flex;
   align-self: flex-end;
   margin-top: auto;
+}
+
+.icons-attribution {
+  color: color-mix(in srgb, var(--text-secondary), transparent 50%);
 }
