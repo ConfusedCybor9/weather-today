@@ -6,11 +6,18 @@ $font-family-quicksand: "Quicksand", "Nunito", "Segoe UI", sans-serif;
 
 // Font sizes
 $font-size: (
-  "xs": 16px,
-  "sm": 18px,
-  "md": 28px,
-  "lg": 48px,
-  "xl": 64px,
+  "xs": 1rem,
+  "sm": 1.25rem,
+  "md": 2rem,
+  "lg": 3rem,
+  "xl": 4rem,
+);
+
+// Breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
 );
 
 // Colors
@@ -56,9 +63,3 @@ $icon-size: (
   "md": 64px,
   "lg": 128px,
 );
-
-// Layout
-$container-max-width: 1200px;
-$marquee-width: 600px;
-$marquee-height: 150px;
-$search-width: 400px;

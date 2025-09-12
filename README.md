@@ -4,9 +4,10 @@ A **simple and elegant** weather application that lets you check the current wea
 
 ## 🚀 Features
 
-- 🔍 Search weather by city name  
+- 🔍 Search weather by city name
 - 🌡️ Real-time temperature, weather conditions, and details
 - 🎨 Clean, minimalistic interface
+- 📱 Fully responsive design with mobile adaptation
 - 🌍 Support for Russian and English language
 - 🎭 Light and dark mode with smooth transitions
 
@@ -22,10 +23,8 @@ A **simple and elegant** weather application that lets you check the current wea
 
 ## 🛠️ Getting Started
 
-  
 1️⃣ Clone the repository
 
-  
 ```bash
 
 git clone git@github.com:ConfusedCybor9/weather-today.git

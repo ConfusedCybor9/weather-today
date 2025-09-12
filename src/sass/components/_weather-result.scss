@@ -3,13 +3,15 @@
 @use "../abstracts/mixins" as *;
 
 .weather-result {
-  min-width: $search-width;
+  width: 100%;
+  max-width: 400px;
   padding: 20px;
   border: 1px solid var(--border);
   background-color: var(--background-secondary);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
@@ -54,10 +56,17 @@
 
   &-details {
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 10px;
     border-top: 1px solid var(--border);
     transition: border-color 0.3s ease-in-out;
+
+    @include respond("md") {
+      flex-direction: row;
+      gap: 20px;
+    }
   }
 }
