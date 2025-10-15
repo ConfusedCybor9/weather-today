@@ -10,7 +10,7 @@ import hot from "../../assets/img/weather-icons/temperature/hot.png";
 import moderate from "../../assets/img/weather-icons/temperature/moderate.png";
 
 export function getTempIconURL(temp) {
-	if (temp) {
+	if (typeof temp === "number") {
 		if (temp > 28) {
 			return hot;
 		} else if (temp < 15) {
